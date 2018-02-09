@@ -15,6 +15,7 @@ function Star() {
   }
 
   this.display = function() {
+    strokeWeight(0);
     fill(255);
     ellipse(this.x, this.y, this.size, this.size);
   }

@@ -12,18 +12,18 @@
   <script src="./p5/p5.sound.min.js"></script>
   <script src="./assets/javascript/sketch.js" type="text/javascript"></script>
   <script src="./assets/javascript/star.js" type="text/javascript"></script>
-
+  <script src="./assets/javascript/box.js" type="text/javascript"></script>
   <link href="./assets/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
 <body>
-  <a href="https://github.com/aleitner">Github</a>
-  <a href="#" onClick=''>About</a>
-  <a href="#" onClick=''>Projects</a>
-  <a href="#" onClick=''>Cosplay</a>
-  <br />
-  <br />
+  <div id='header'>
+    <a href="https://github.com/aleitner">Github</a>
+    <a href="#" onClick='createSection("about")'>About</a>
+    <a href="#" onClick='createSection("projects")'>Projects</a>
+    <a href="#" onClick='createSection("cosplay")'>Cosplay</a>
+  </div>
 
   <div id='about'>
     <font size="3">

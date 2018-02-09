@@ -18,7 +18,7 @@ function draw() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  createSection(this.currentDisplay);
+  createSection(this.currentDisplay, document.getElementById("header").offsetTop + document.getElementById("header").offsetHeight);
 }
 
 function createStarfield() {
@@ -46,24 +46,4 @@ function drawBoxes() {
 
 function createBox(x, y, boxWidth, boxHeight) {
   boxes.push(new Box(x, y, boxWidth, boxHeight));
-}
-
-function createSection(section) {
-  if (section == 'cosplay') {
-    deleteBoxes();
-    createBox(50, 100, width - 50, height - 10);
-    this.currentDisplay = 'cosplay';
-  }
-
-  if (section == 'projects') {
-    deleteBoxes();
-    createBox(50, 100, width - 50, height - 10);
-    this.currentDisplay = 'projects';
-  }
-
-  if (section == 'about') {
-    deleteBoxes();
-    createBox(50, 100, width - 50, height - 10);
-    this.currentDisplay = 'about';
-  }
 }

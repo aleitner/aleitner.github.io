@@ -7,7 +7,7 @@ function Box(x, y, boxWidth, boxHeight) {
     this.yLine2 = y;
     this.boxWidth = boxWidth;
     this.boxHeight = boxHeight;
-    this.drawSpeed = 10;
+    this.drawSpeed = 20;
 
     this.drawBox = function() {
       fill('#87E9F1');

@@ -13,6 +13,8 @@
   <script src="./assets/javascript/sketch.js" type="text/javascript"></script>
   <script src="./assets/javascript/star.js" type="text/javascript"></script>
   <script src="./assets/javascript/box.js" type="text/javascript"></script>
+  <script src="./assets/javascript/pages/about.js" type="text/javascript"></script>
+  <script src="./assets/javascript/pages/projects.js" type="text/javascript"></script>
   <link href="./assets/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
@@ -20,15 +22,39 @@
 <body>
   <div id='header'>
     <a href="https://github.com/aleitner">Github</a>
-    <a href="#" onClick='createSection("about")'>About</a>
-    <a href="#" onClick='createSection("projects")'>Projects</a>
-    <a href="#" onClick='createSection("cosplay")'>Cosplay</a>
+    <a href="#" onClick='createSection("about", document.getElementById("header").offsetTop + document.getElementById("header").offsetHeight)'>About</a>
+    <a href="#" onClick='createSection("projects", document.getElementById("header").offsetTop + document.getElementById("header").offsetHeight)'>Projects</a>
+    <a href="#" onClick='createSection("cosplay", document.getElementById("header").offsetTop + document.getElementById("header").offsetHeight)'>Cosplay</a>
   </div>
 
-  <div id='about'>
-    <font size="3">
-      Hacker, Cosplayer, Video Game Collector
-    </font>
+  <div id='box' class='insideBox'>
   </div>
 </body>
 </html>
+
+<script>
+
+function createSection(section, offsetHeight) {
+  if (section == 'cosplay') {
+    deleteBoxes();
+    createBox(10, offsetHeight + 10, width - 10, height - 10);
+    this.currentDisplay = 'cosplay';
+    document.getElementById("box").innerHTML = this.cosplay.text;
+  }
+
+  if (section == 'projects') {
+    deleteBoxes();
+    createBox(10, offsetHeight + 10, width - 10, height - 10);
+    this.currentDisplay = 'projects';
+    document.getElementById("box").innerHTML = this.projects.text;
+  }
+
+  if (section == 'about') {
+    deleteBoxes();
+    createBox(10, offsetHeight + 10, width - 10, height - 10);
+    this.currentDisplay = 'about';
+    document.getElementById("box").innerHTML = this.about.text;
+  }
+}
+
+</script>

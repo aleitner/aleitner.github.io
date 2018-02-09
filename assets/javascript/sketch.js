@@ -18,6 +18,7 @@ function draw() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+  createSection(this.currentDisplay);
 }
 
 function createStarfield() {

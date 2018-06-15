@@ -13,6 +13,7 @@
   <script src="./assets/javascript/sketch.js" type="text/javascript"></script>
   <script src="./assets/javascript/star.js" type="text/javascript"></script>
   <script src="./assets/javascript/box.js" type="text/javascript"></script>
+  <script src="./assets/javascript/pages/home.js" type="text/javascript"></script>
   <script src="./assets/javascript/pages/about.js" type="text/javascript"></script>
   <script src="./assets/javascript/pages/projects.js" type="text/javascript"></script>
   <link href="./assets/css/style.css" rel="stylesheet">
@@ -34,11 +35,10 @@
 <script>
 
 function createSection(section, offsetHeight) {
-  if (section == 'cosplay') {
+  if (section == 'home') {
     deleteBoxes();
-    createBox(10, offsetHeight + 10, width - 10, height - 10);
-    this.currentDisplay = 'cosplay';
-    document.getElementById("box").innerHTML = this.cosplay.text;
+    this.currentDisplay = 'home';
+    document.getElementById("box").innerHTML = this.home.text;
   }
 
   if (section == 'projects') {
@@ -55,5 +55,7 @@ function createSection(section, offsetHeight) {
     document.getElementById("box").innerHTML = this.about.text;
   }
 }
+
+createSection('home', 0)
 
 </script>

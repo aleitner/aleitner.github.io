@@ -4,7 +4,8 @@ this.about = {
             I have studied Japanese and Linguistics at GSU. <br /><br />
             Cosplayer, Smash player, Blacksmith<br /><br />
 
-            <a href="http://twitter.com/piginthemudo"><i class="fa fa-twitter"></i></a> |
-            <a href="https://www.linkedin.com/in/alexander-leitner-4048ab62"><i class="fa fa-linkedin"></i></a>
+            <a href="http://twitter.com/piginthemudo">twitter</a> |
+            <a href="https://www.linkedin.com/in/alexander-leitner-4048ab62">linkedin</a> |
+            <a href="https://github.com/aleitner">github</a> 
         `
 }

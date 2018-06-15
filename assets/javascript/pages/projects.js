@@ -1,6 +1,6 @@
 this.projects = {
   text: `
-            <u><a href="https://github.com/aleitner">My Github</a></u><br /><br />
+            <a href="https://github.com/aleitner">My Github</a><br /><br />
             <u>CryptoCurrencies</u><br /><br />
             <a href="http://robinhoodcoin.net">RobinhoodCoin</a> - A coin that you can steal<br />
             <a href="https://github.com/aleitner/DebtCoin">DebtCoin</a> - Bring debt to the blockchain<br />

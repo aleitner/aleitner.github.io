@@ -1,0 +1,5 @@
+this.home = {
+  text: `
+            Welcome!
+        `
+}

@@ -1,8 +1,18 @@
 this.projects = {
   text: `
-            <u>CryptoCurrencies</u><br /><br />
-            <a href="http://robinhoodcoin.net">RobinhoodCoin</a><br />
-            <a href="https://github.com/aleitner/DebtCoin">DebtCoin</a><br />
-            <a href="https://github.com/borkcoin/BorkCoin">BorkCoin</a><br />
+            <h3><a href="https://github.com/aleitner">My Github</a></h3><br /><br />
+            <h3>CryptoCurrencies</h3><br /><br />
+            <a href="http://robinhoodcoin.net">RobinhoodCoin</a> - A coin that you can steal<br />
+            <a href="https://github.com/aleitner/DebtCoin">DebtCoin</a> - Bring debt to the blockchain<br />
+            <a href="https://github.com/borkcoin/BorkCoin">BorkCoin</a> - Share data on the Ethereum blockchain<br />
+            <br />
+            <u>Storj</u><br /><br />
+            <a href="https://github.com/storj/libstorj">Storj Client Library</a><br />
+            <a href="https://github.com/storj/storj">Storj Go Library</a><br />
+            <br />
+            <u>Other</u><br /><br />
+            <a href="https://github.com/aleitner/FilePiece">FilePiece</a> - Library for concurrently writing/reading files in golang<br />
+            <a href="https://github.com/aleitner/shameful_gavin">Shameful Gavin</a> - Chrome plugin for shaming my friend<br />
+            <a href="https://github.com/aleitner/libmapstore">libmapstore</a> - Pseudo filesystem for storing data in files<br />
           `
 }

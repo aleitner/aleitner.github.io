@@ -35,27 +35,43 @@
 <script>
 
 function createSection(section, offsetHeight) {
-  if (section == 'home') {
-    deleteBoxes();
+  if (section == '') {
     this.currentDisplay = 'home';
     document.getElementById("box").innerHTML = this.home.text;
   }
 
   if (section == 'projects') {
-    deleteBoxes();
-    createBox(10, offsetHeight + 10, width - 10, height - 10);
     this.currentDisplay = 'projects';
     document.getElementById("box").innerHTML = this.projects.text;
   }
 
   if (section == 'about') {
-    deleteBoxes();
-    createBox(10, offsetHeight + 10, width - 10, height - 10);
     this.currentDisplay = 'about';
     document.getElementById("box").innerHTML = this.about.text;
   }
+
+  if (section == 'img') {
+    var name = 'assets/images/' + getUrlParameter('name')
+    this.currentDisplay = 'image';
+    document.getElementById("box").innerHTML = "<img src=${name} >";
+  }
 }
 
-createSection('home', 0)
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+window.onload = createSection(getUrlParameter('api'), document.getElementById("header").offsetTop + document.getElementById("header").offsetHeight)
 
 </script>

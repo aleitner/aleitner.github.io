@@ -34,6 +34,11 @@
 
 <script>
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  createSection(this.currentDisplay, document.getElementById("header").offsetTop + document.getElementById("header").offsetHeight);
+}
+
 function createSection(section, offsetHeight) {
   if (section == '') {
     this.currentDisplay = 'home';

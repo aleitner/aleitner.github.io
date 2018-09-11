@@ -16,11 +16,6 @@ function draw() {
   drawBoxes();
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  createSection(this.currentDisplay, document.getElementById("header").offsetTop + document.getElementById("header").offsetHeight);
-}
-
 function createStarfield() {
   for (var i = 0; i < starCount; i++) {
     stars[i] = new Star();

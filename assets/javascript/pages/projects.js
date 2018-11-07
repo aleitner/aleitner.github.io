@@ -5,6 +5,7 @@ this.projects = {
             <a href="http://robinhoodcoin.net">RobinhoodCoin</a> - A coin that you can steal<br />
             <a href="https://github.com/aleitner/DebtCoin">DebtCoin</a> - Bring debt to the blockchain<br />
             <a href="https://github.com/borkcoin/BorkCoin">BorkCoin</a> - Share data on the Ethereum blockchain<br />
+            <a href="https://am-i-cursed.com/">CurseCoin</a> - Curse your enemies using the blockchain. Written with <a href="https://github.com/navillasa">navillasa</a>. <a href="https://github.com/CurseCoin/CurseCoin">Code</a><br />
             <br />
             <u>Storj</u><br /><br />
             <a href="https://github.com/storj/libstorj">Storj Client Library</a><br />

@@ -1,17 +1,17 @@
 /* unvisited link */
 a:link {
-    color: #87E9F1;
+    color: #FFFFFF;
     text-decoration:  none;
 }
 
 /* visited link */
 a:visited {
-    color: #87E9F1;
+    color: #FFFFFF;
 }
 
 /* mouse over link */
 a:hover {
-    color: #FFFFFF;
+    color: #87E9F1;
 }
 
 /* selected link */

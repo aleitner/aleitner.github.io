@@ -12,7 +12,7 @@ this.projects = {
             <a href="https://github.com/storj/storj">Storj Go Library</a><br />
             <br />
             <u>Games</u><br /><br />  
-            <a href="https://spacigrade.github.io/">Made in 1 day at a Game Jam. Survive as a tardigrade in space!</a><br />
+            <a href="https://spacigrade.github.io/">Spacigrade</a> - Made in 1 day at a Game Jam. Survive as a tardigrade in space!<br />
             <br />
             <u>Other</u><br /><br />
             <a href="https://github.com/aleitner/FilePiece">FilePiece</a> - Library for concurrently writing/reading files in golang<br />

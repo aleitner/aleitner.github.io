@@ -104,7 +104,14 @@ function genRatios() {
 
 
   results = fuelratio.bruteForceCalculate(Wc, Fc, Wt, Ft, W1, W2)
-  document.getElementById('result').innerHTML = '<u><font color="red" size="3">' + results[0].toFixed(2) + '</font></u> gallons of ' + W1*100 + '% ethanol<br/><br/><u><font color="red" size="3">' + results[1].toFixed(2) + '</font></u> gallons of ' + W2*100 + '% ethanol<br/><br/> Result Ratio ' + results[2].toFixed(2)
+  document.getElementById('result').innerHTML = '<u>' +
+      '<font color="red" size="3">' + results[0].toFixed(2) + '</font>' +
+    '</u> gallons of ' + (W1*100).toFixed(0) + '% ethanol' +
+    '<br/><br/>' +
+    '<u>' +
+      '<font color="red" size="3">' + results[1].toFixed(2) + '</font>' +
+    '</u> gallons of ' + (W2*100).toFixed(0) + '% ethanol' +
+    '<br/><br/> Result Ratio ' + results[2].toFixed(2)
   return
 }
 

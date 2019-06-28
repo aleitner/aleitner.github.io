@@ -2469,7 +2469,7 @@ $packages["main"] = (function() {
 			if (!(i <= Ft - Fc)) { break; }
 			f1 = i;
 			f2 = Ft - Fc - i;
-			ratio = (f1 * W1 + f2 * W2 + Wc * Fc) / (Fc + f1 + f2);
+			ratio = (f1 * W1 + f2 * W2 + Wc * Fc) / Ft;
 			if (ratio === Wt) {
 				_tmp$3 = f1;
 				_tmp$4 = f2;

@@ -19,31 +19,42 @@
   <font size="2">
   <form>
     <div class="form-group">
-      <label for="Wc">Current Ethanol Ratio</label>
-      <input type="number" class="form-control" id="Wc" value="60">%
-    </div><br />
-    <div class="form-group">
-      <label for="Fc">Current Gallons of Fuel</label>
-      <input type="number" step="any" class="form-control" id="Fc" value="0"> gallon(s)
-    </div><br />
-    <div class="form-group">
-      <label for="Wt">Optimal Ethanol Ratio</label>
-      <input type="number" class="form-control" id="Wt" value="70">%
-    </div><br />
-    <div class="form-group">
-      <label for="Ft">Tank Size</label>
-      <input type="number" class="form-control" id="Ft" value="15"> gallon(s)
-    </div><br />
-    <div class="form-group">
-      <label for="W1">Ethanol Ratio in Fuel Source #1</label>
-      <input type="number" class="form-control" id="W1" value="10">%
-    </div><br />
-    <div class="form-group">
-      <label for="W2">Ethanol Ratio in Fuel Source #2</label>
-      <input type="number" class="form-control" id="W2" value="85">%
+      <label for="Fc">Current Gallons of Fuel</label><br />
+      <input type="range" name="FcRange" min="0" max="40" value="0" oninput="this.form.FcInput.value=this.value" />
+      <input type="number" id="Fc" name="FcInput" min="0" max="40" value="0" oninput="this.form.FcRange.value=this.value" />
     </div><br />
 
-    <button type="button" class="btn btn-primary" onclick="genRatios()">Submit</button>
+    <div class="form-group">
+      <label for="Ft">Tank Size</label><br />
+      <input type="range" name="FtRange" min="0" max="40" value="15" oninput="this.form.FtInput.value=this.value" />
+      <input type="number" id="Ft" name="FtInput" min="0" max="40" value="15" oninput="this.form.FtRange.value=this.value" />
+    </div><br />
+
+    <div class="form-group">
+      <label for="Wc">Current Ethanol Percent</label><br />
+      <input type="range" name="WcRange" min="0" max="100" value="60" oninput="this.form.WcInput.value=this.value" />
+      <input type="number" id="Wc" name="WcInput" min="0" max="100" value="60" oninput="this.form.WcRange.value=this.value" />
+    </div><br />
+
+    <div class="form-group">
+      <label for="Wt">Optimal Ethanol Percent</label><br />
+      <input type="range" name="WtRange" min="0" max="100" value="70" oninput="this.form.WtInput.value=this.value" />
+      <input type="number" id="Wt" name="WtInput" min="0" max="100" value="70" oninput="this.form.WtRange.value=this.value" />
+    </div><br />
+
+    <div class="form-group">
+      <label for="W1">Ethanol Percent in Fuel Source #1</label><br />
+      <input type="range" name="W1Range" min="0" max="100" value="10" oninput="this.form.W1Input.value=this.value" />
+      <input type="number" id="W1" name="W1Input" min="0" max="100" value="10" oninput="this.form.W1Range.value=this.value" />
+    </div><br />
+    <div class="form-group">
+      <label for="W2">Ethanol Percent in Fuel Source #2</label><br />
+      <input type="range" name="W2Range" min="0" max="100" value="85" oninput="this.form.W2Input.value=this.value" />
+      <input type="number" id="W2" name="W2Input" min="0" max="100" value="85" oninput="this.form.W2Range.value=this.value" />
+
+    </div><br />
+
+    <button type="button" class="btn btn-primary" onclick="genRatios()">Calculate</button>
   </form>
   </font> 
 

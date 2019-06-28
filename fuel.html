@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fuel Ratio Calculator</title>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <script src="./assets/javascript/fuel.js" type="text/javascript"></script>
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+
+<body style="text-align: center">
+  <font size="2">
+  <form>
+    <div class="form-group">
+      <label for="Wc">Current Ethanol Ratio</label>
+      <input type="number" class="form-control" id="Wc" value="60">%
+    </div><br />
+    <div class="form-group">
+      <label for="Fc">Current Gallons of Fuel</label>
+      <input type="number" step="any" class="form-control" id="Fc" value="0"> gallon(s)
+    </div><br />
+    <div class="form-group">
+      <label for="Wt">Optimal Ethanol Ratio</label>
+      <input type="number" class="form-control" id="Wt" value="70">%
+    </div><br />
+    <div class="form-group">
+      <label for="Ft">Tank Size</label>
+      <input type="number" class="form-control" id="Ft" value="15"> gallon(s)
+    </div><br />
+    <div class="form-group">
+      <label for="W1">Ethanol Ratio in Fuel Source #1</label>
+      <input type="number" class="form-control" id="W1" value="15">%
+    </div><br />
+    <div class="form-group">
+      <label for="W2">Ethanol Ratio in Fuel Source #2</label>
+      <input type="number" class="form-control" id="W2" value="85">%
+    </div><br />
+
+    <button type="button" class="btn btn-primary" onclick="genRatios()">Submit</button>
+  </form>
+  </font> 
+
+  <font size="3" color="black">
+  <div id="result"> 
+  </div>
+  </font> 
+</body>
+</html>
+
+<script>
+function genRatios() {
+  let Wc = document.getElementById("Wc").value/100;
+  let Fc = document.getElementById("Fc").value;
+  let Wt = document.getElementById("Wt").value/100;
+  let Ft = document.getElementById("Ft").value;
+  let W1 = document.getElementById("W1").value/100;
+  let W2 = document.getElementById("W2").value/100;
+
+  if (!Wc) {
+     document.getElementById('result').innerHTML = 'You must specify the Current Ethanol Ratio'
+     return
+  }
+
+  if (!Fc) {
+     document.getElementById('result').innerHTML = 'You must specify the Current Gallons of Fuel'
+     return
+  }
+  
+  if (!Wt) {
+     document.getElementById('result').innerHTML = 'You must specify the Optimal Ethanol Ratio'
+     return
+  }
+
+  if (!Ft) {
+     document.getElementById('result').innerHTML = 'You must specify the Tank Size'
+     return
+  }
+
+  if (!W1) {
+     document.getElementById('result').innerHTML = 'You must specify the Ethanol Ratio in Fuel Source #1'
+     return
+  }
+
+  if (!W2) {
+     document.getElementById('result').innerHTML = 'You must specify the Ethanol Ratio in Fuel Source #2'
+     return
+  }
+
+
+  results = fuelratio.bruteForceCalculate(Wc, Fc, Wt, Ft, W1, W2)
+  document.getElementById('result').innerHTML = '<u><font color="red" size="3">' + results[0].toFixed(2) + '</font></u> gallons of ' + W1*100 + '% ethanol<br/><br/><u><font color="red" size="3">' + results[1].toFixed(2) + '</font></u> gallons of ' + W2*100 + '% ethanol<br/><br/> Result Ratio ' + results[2].toFixed(2)
+  return
+}
+</script>

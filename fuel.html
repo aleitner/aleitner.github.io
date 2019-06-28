@@ -17,7 +17,7 @@
 
 <body style="text-align: center">
   <font size="2">
-  <form>
+  <form oninput="genRatios()">
     <div class="form-group">
       <label for="Fc">Current Gallons of Fuel</label><br />
       <input type="range" name="FcRange" min="0" max="40" value="0" oninput="this.form.FcInput.value=this.value" />
@@ -53,8 +53,6 @@
       <input type="number" id="W2" name="W2Input" min="0" max="100" value="85" oninput="this.form.W2Range.value=this.value" />
 
     </div><br />
-
-    <button type="button" class="btn btn-primary" onclick="genRatios()">Calculate</button>
   </form>
   </font> 
 
@@ -109,4 +107,6 @@ function genRatios() {
   document.getElementById('result').innerHTML = '<u><font color="red" size="3">' + results[0].toFixed(2) + '</font></u> gallons of ' + W1*100 + '% ethanol<br/><br/><u><font color="red" size="3">' + results[1].toFixed(2) + '</font></u> gallons of ' + W2*100 + '% ethanol<br/><br/> Result Ratio ' + results[2].toFixed(2)
   return
 }
+
+genRatios();
 </script>
